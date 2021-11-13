@@ -1,0 +1,301 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Weather Forecast</title>
+    <meta charset="us-ascii">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <!--Top Menu-->
+    <header>
+        <div class="wrapper">
+            <div class="header-wrapper-space">
+                <p class="header-text">MY WEATHER</p>
+                <div class="search-container">
+                    <input type="text" placeholder="Search.." name="search" id="searchText">
+                    <button type="submit" id="searchButton"><img src="images/searchIcon.png" width="28px" height="28px"/></button>
+                </div>
+            </div>
+        </div>
+        <div class="nav-menu">
+            <div class="nav-menu-items">
+                <div id="todayTab" class="nav-item">
+                    <p>Today</p>
+                </div>
+
+                <div id="fiveDayTab" class="nav-item">
+                    <p>5-day forecast</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Main Page-->
+    <div class="container">
+        <div class="main-block current" id="mainBlockCurrent">
+            <div class="wrapper">
+                <div class="block-header-wrapper">
+                    <p class="blocks-header-text">CURRENT WEATHER</p>
+                    <p class="blocks-header-text" id="currentDate"></p>
+                </div>
+            </div>
+
+            <div class="block-content-wrapper">
+                <div class="block-content">
+                    <div class="visualizer block-content-item">
+                        <img src="#" alt="Weather" id="weatherIcon" />
+                        <p id="weatherCloud">Sunny</p>
+                    </div>
+
+                    <div class="tempnum block-content-item">
+                        <p id="actualTemp" class="actualTemp">29 C</p>
+                        <p id="feelsLikeTemp" class="feelsLikeTemp">30 C</p>
+                    </div>
+
+                    <div class="additional block-content-item">
+                        <p id="sunrise">7:04 AM</p>
+                        <p id="sunset">5:11 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-block hourly" id="mainBlockHourly">
+            <div class="wrapper">
+                <div class="block-header-wrapper">
+                    <p class="blocks-header-text">HOURLY</p>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <div class="grid-container">
+                    <!--Time spans-->
+                    <div class="grid-item">
+                        <p>TODAY</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyTime1">7pm</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyTime2">8pm</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyTime3">9pm</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyTime4">10pm</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyTime5">11pm</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyTime6">12pm</p>
+                    </div>
+
+                    <div class="grid-item">
+
+                    </div>
+
+                    <!--Wheater icons-->
+                    <div class="grid-item">
+                        <img id="hourlyIcon1" src="./images/Icons/50d.png" alt="icon" />
+                    </div>
+                    <div class="grid-item">
+                        <img id="hourlyIcon2" src="./images/Icons/50d.png" alt="icon" />
+                    </div>
+                    <div class="grid-item">
+                        <img id="hourlyIcon3" src="./images/Icons/50d.png" alt="icon" />
+                    </div>
+                    <div class="grid-item">
+                        <img id="hourlyIcon4" src="./images/Icons/50d.png" alt="icon" />
+                    </div>
+                    <div class="grid-item">
+                        <img id="hourlyIcon5" src="./images/Icons/50d.png" alt="icon" />
+                    </div>
+                    <div class="grid-item">
+                        <img id="hourlyIcon6" src="./images/Icons/50d.png" alt="icon" />
+                    </div>
+
+                    <!--Wheater condition-->
+                    <div class="grid-item">
+                        <p>Condition</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyCondition1">Sunny</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyCondition2">Sunny</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyCondition3">Clear</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyCondition4">Clear</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyCondition5">Clear</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyCondition6">Clear</p>
+                    </div>
+
+                    <!--Temperature-->
+                    <div class="grid-item">
+                        <p>Temp</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyTemp1">29?</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyTemp2">28?</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyTemp3">28?</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyTemp4">27?</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyTemp5">27?</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyTemp6">27?</p>
+                    </div>
+
+                    <!--Real feel-->
+                    <div class="grid-item">
+                        <p>Real feel</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyFeelsTemp1">28?</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyFeelsTemp2">27?</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyFeelsTemp3">28?</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyFeelsTemp4">27?</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyFeelsTemp5">27?</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyFeelsTemp6">26?</p>
+                    </div>
+
+                    <!--Wind-->
+                    <div class="grid-item">
+                        <p>Wind</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyWind1">11 ESE</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyWind2">9 ESE</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyWind3">6 ESE</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyWind4">6 ESE</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyWind5">6 ESE</p>
+                    </div>
+                    <div class="grid-item">
+                        <p id="hourlyWind6">7 ESE</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-block nearby" id="mainBlockNearby">
+            <div class="wrapper">
+                <div class="block-header-wrapper">
+                    <p class="blocks-header-text">NEARBY PLACES</p>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <div class="grid-nearby">
+                    <div class="grid-item">
+                        <h2 id="nearbyCity1">city1</h2>
+                        <img src="./images/Icons/50d.png" id="nearbyIcon1" />
+                        <p id="nearbyTemp1">20</p>
+                    </div>
+                    <div class="grid-item">
+                        <h2 id="nearbyCity2">city2</h2>
+                        <img src="./images/Icons/50d.png" id="nearbyIcon2" />
+                        <p id="nearbyTemp2">20</p>
+                    </div>
+                    <div class="grid-item">
+                        <h2 id="nearbyCity3">city3</h2>
+                        <img src="./images/Icons/50d.png" id="nearbyIcon3" />
+                        <p id="nearbyTemp3">20</p>
+                    </div>
+                    <div class="grid-item">
+                        <h2 id="nearbyCity4">city4</h2>
+                        <img src="./images/Icons/50d.png" id="nearbyIcon4" />
+                        <p id="nearbyTemp4">20</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--5-day Page-->
+    <div class="container">
+        <div id="fiveDayBlockPicker" class="main-block day-picker">
+            <div class="grid-five-days">
+                <div class="grid-item">
+                    <h2>Today</h2>
+                    <p class="five-days-date" id="fiveDayDate1">JUN 30</p>
+                    <img src="./images/Icons/50d.png" id="fiveDayIcon1" />
+                    <h1 id="fiveDayTemp1">25 C</h1>
+                    <p id="fiveDayCondition1">Clear</p>
+                </div>
+                <div class="grid-item">
+                    <h2 id="fiveDayDay2">Sun</h2>
+                    <p class="five-days-date" id="fiveDayDate2">JUL 01</p>
+                    <img src="./images/Icons/50d.png" id="fiveDayIcon2" />
+                    <h1 id="fiveDayTemp2">25 C</h1>
+                    <p id="fiveDayCondition2">Clear</p>
+                </div>
+                <div class="grid-item">
+                    <h2 id="fiveDayDay3">Mon</h2>
+                    <p class="five-days-date" id="fiveDayDate3">JUL 02</p>
+                    <img src="./images/Icons/50d.png" id="fiveDayIcon3" />
+                    <h1 id="fiveDayTemp3">25 C</h1>
+                    <p id="fiveDayCondition3">Clear</p>
+                </div>
+                <div class="grid-item">
+                    <h2 id="fiveDayDay4">Tue</h2>
+                    <p class="five-days-date" id="fiveDayDate4">JUL 03</p>
+                    <img src="./images/Icons/50d.png" id="fiveDayIcon4" />
+                    <h1 id="fiveDayTemp4">25 C</h1>
+                    <p id="fiveDayCondition4">Clear</p>
+                </div>
+                <div class="grid-item">
+                    <h2 id="fiveDayDay5">Wed</h2>
+                    <p class="five-days-date" id="fiveDayDate5">JUL 04</p>
+                    <img src="./images/Icons/50d.png" id="fiveDayIcon5" />
+                    <h1 id="fiveDayTemp5">25 C</h1>
+                    <p id="fiveDayCondition5">Clear</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Error Page-->
+    <div class="container">
+        <div class="main-block error" id="ErrorPage">
+            <div class="error-img">
+                <img src="./images/pageNotFound.png" alt="Page not found" width="350px" height="350px" />
+            </div>
+            <p>Could not be found. Please enter a different location.</p>
+        </div>
+    </div>
+
+    <script src="js/jQuery/jquery-3.6.0.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>
